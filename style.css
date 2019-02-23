@@ -1,0 +1,71 @@
+.title-banner {
+    margin: 20px 0px 20px 0px;
+    padding:20px;
+    background-color:lightgray;
+    text-align:center;
+}
+
+.title-banner-text {
+    font-size: 30pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.news-title {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.news-headline {
+    font-size: 12pt;
+}
+
+.news-content {
+    font-size: 9pt;
+}
+
+.featimg-title {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.currweather {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 10px;
+}
+
+.currweather-title {
+    font-size:10 pt;
+    font-weight: bold;
+}
+
+.currweather-content {
+    font-size: 9pt;
+}
+
+.marsfacts-title {
+    font-size:10 pt;
+    font-weight: bold;
+}
+
+.hemispheres-title {
+    font-size: 20pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hemi-img {
+    border-style: solid;
+    border-width: 1px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.hemi-img-label {
+    font-size: 16pt;
+    text-align: center;
+    padding: 10px;
+}
