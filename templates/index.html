@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mission to Mars</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Locally-defined CSS overlay-->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+</head>
+
+
+
+<body>
+
+    <div class="container">
+        <div class="row title-banner">
+            <div class="col-md-12 title">
+                <div class="title-banner-text">
+                    Mission to Mars
+                </div>
+
+                <button type="button">
+                    <a href="/scrape/" >Scrape New Data</a>
+                </button>
+            </div>
+        </div>
+
+        <!-- Latest Mars News -->
+        <div class="row news-banner">
+            <div class="col-md-12">
+                <div class="news-title">Latest Mars News</div>
+
+                <div class="news-headline">{{data.news_title}}</div>
+
+                <div class="news-content">{{data.news_p}}</div>
+            </div>
+        </div>
+    
+        <br><br>
+
+        <!-- Featured Mars Image / Current Weather / Mars Facts -->
+        <div class="row">
+
+            <!-- Featured Mars Image -->
+            <div class="col-md-7">
+                <div class="featimg-title">Featured Mars Image</div>
+                <img class="img-responsive" alt="Featured Mars Image" src={{data.featured_image_url}}>
+            </div>
+
+
+            <div class="col-md-5">            
+                <!-- Current Weather -->
+                <div class="currweather">
+                    <div class="currweather-title">Current Weather on Mars</div>
+                    <div class="currweather-content">{{data.mars_weather}}</div>
+                </div>
+
+                <br><br>
+
+                <!-- Mars Facts -->
+                <div class="marsfacts">
+                    <div class="marsfacts-title">Mars Facts</div>
+
+                    <table border="1" class="dataframe">
+                        <thead>
+                          <tr style="text-align: right;">
+                            <th>Property</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Equatorial Diameter:</td>
+                            <td>6,792 km</td>
+                          </tr>
+                          <tr>
+                            <td>Polar Diameter:</td>
+                            <td>6,752 km</td>
+                          </tr>
+                          <tr>
+                            <td>Mass:</td>
+                            <td>6.42 x 10^23 kg (10.7% Earth)</td>
+                          </tr>
+                          <tr>
+                            <td>Moons:</td>
+                            <td>2 (Phobos &amp; Deimos)</td>
+                          </tr>
+                          <tr>
+                            <td>Orbit Distance:</td>
+                            <td>227,943,824 km (1.52 AU)</td>
+                          </tr>
+                          <tr>
+                            <td>Orbit Period:</td>
+                            <td>687 days (1.9 years)</td>
+                          </tr>
+                          <tr>
+                            <td>Surface Temperature:</td>
+                            <td>-153 to 20 °C</td>
+                          </tr>
+                          <tr>
+                            <td>First Record:</td>
+                            <td>2nd millennium BC</td>
+                          </tr>
+                          <tr>
+                            <td>Recorded By:</td>
+                            <td>Egyptian astronomers</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                </div>
+            </div>
+
+        </div>
+        
+        <br><br><br>
+
+        <!-- Mars Hemispheres Title-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hemispheres-title">Mars Hemispheres</div>
+            </div>
+        </div>
+
+        <!-- Mars Hemispheres Row 1-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="hemi-img">
+                    <img class="img-responsive" alt="Featured Mars Image" src={{data.hemisphere_image_urls[0].img_url}}>
+                    <div class="hemi-img-label">{{data.hemisphere_image_urls[0].title}}</div>  
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="hemi-img">
+                    <img class="img-responsive" alt="Featured Mars Image" src={{data.hemisphere_image_urls[1].img_url}}>
+                    <div class="hemi-img-label">{{data.hemisphere_image_urls[1].title}}</div>  
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mars Hemispheres Row 2-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="hemi-img">
+                    <img class="img-responsive" alt="Featured Mars Image" src={{data.hemisphere_image_urls[2].img_url}}>
+                    <div class="hemi-img-label">{{data.hemisphere_image_urls[2].title}}</div>  
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="hemi-img">
+                    <img class="img-responsive" alt="Featured Mars Image" src={{data.hemisphere_image_urls[3].img_url}}>
+                    <div class="hemi-img-label">{{data.hemisphere_image_urls[3].title}}</div>  
+                </div>
+            </div>
+        </div>
+    
+    </div> <!-- End Bootstrap Container-->
+
+</body>
+
+</html>
